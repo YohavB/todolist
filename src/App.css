@@ -133,3 +133,17 @@ select {
 }
 /* Transition */
 
+
+
+.copyright {
+  position: sticky;
+  bottom:0;
+  color: grey;
+  width: 50%;
+  margin: 20px auto;
+  padding-top: 15px;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+

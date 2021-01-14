@@ -2,7 +2,7 @@ import React from "react";
 
 function Form({ todos, setTodos, setInputText, inputText, setStatus }) {
   const inputTextHandler = (e) => {
-    console.log(e.target.value);
+   
     setInputText(e.target.value);
   };
   const submitTodoHandler = (e) => {
@@ -24,7 +24,7 @@ setStatus(e.target.value)
         value={inputText}
         onChange={inputTextHandler}
         type="text"
-        classNameName="todo-input"
+        className="todo-input"
         required
       />
       <button onClick={submitTodoHandler} className="todo-button" type="submit">

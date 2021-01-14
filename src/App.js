@@ -16,10 +16,8 @@ function App() {
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todos, status]);
-
-  
 
   const filterHandler = () => {
     switch (status) {
@@ -43,7 +41,7 @@ function App() {
     if (localStorage.getItem("todos") === null) {
       localStorage.setItem("todos", JSON.stringify([]));
     } else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
+      let todoLocal = JSON.parse(localStorage.getItem("todos"));
       setTodos(todoLocal);
     }
   };
@@ -67,6 +65,17 @@ function App() {
         setTodos={setTodos}
         filteredTodos={filteredTodos}
       />
+
+      <div className="copyright">
+        © Copyright 2020 YohavB Designed by YohavB. Check the Code {""}
+        <a
+          href="https://github.com/YohavB/Portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Here.
+        </a>
+      </div>
     </div>
   );
 }
